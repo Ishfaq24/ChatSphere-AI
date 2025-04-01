@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="user-avatar">AI</div>
+            <div>
+                <h3>AI Assistant</h3>
+                <p style="color: #666; font-size: 0.9rem;">Pro Version</p>
+            </div>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item active">
+                <i class="fas fa-comment"></i>
+                Chat
+            </li>
+            <li class="nav-item">
+                <i class="fas fa-history"></i>
+                Chat History
+            </li>
+            <li class="nav-item">
+                <i class="fas fa-cog"></i>
+                Settings
+            </li>
+            <li class="nav-item">
+                <i class="fas fa-question-circle"></i>
+                Help & FAQ
+            </li>
+            <li class="nav-item">
+                <i class="fas fa-user-shield"></i>
+                Privacy
+            </li>
+        </ul>
+
+        <div style="margin-top: auto; padding: 1.5rem 0;">
+            <button class="nav-item" style="width: 100%; justify-content: center;">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="chat-title">AI Assistant</div>
+            <div style="display: flex; gap: 1rem;">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="typing-indicator" id="typing-indicator">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot" style="animation-delay: 0.2s"></span>
+                    <span class="typing-dot" style="animation-delay: 0.4s"></span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <div class="input-group">
+                    <input type="text" id="message" placeholder="Type or speak your message...">
+                    <button class="voice-btn" id="voice-btn">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <span>Dark Mode</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span>Voice Responses</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="voice-responses-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>
